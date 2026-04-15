@@ -1,0 +1,87 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #F5F5F0;
+  --foreground: #1A1A1A;
+  --card: #F5F5F0;
+  --card-foreground: #1A1A1A;
+  --popover: #F5F5F0;
+  --popover-foreground: #1A1A1A;
+  --primary: #1A1A1A;
+  --primary-foreground: #F5F5F0;
+  --secondary: #E8E8E3;
+  --secondary-foreground: #1A1A1A;
+  --muted: #E8E8E3;
+  --muted-foreground: #666666;
+  --accent: #E8E8E3;
+  --accent-foreground: #1A1A1A;
+  --destructive: #C0392B;
+  --destructive-foreground: #F5F5F0;
+  --border: #D4D4CF;
+  --input: #D4D4CF;
+  --ring: #1A1A1A;
+  --radius: 0rem;
+}
+
+.dark {
+  --background: #0A0A08;
+  --foreground: #F0F0EB;
+  --card: #111110;
+  --card-foreground: #F0F0EB;
+  --popover: #111110;
+  --popover-foreground: #F0F0EB;
+  --primary: #F0F0EB;
+  --primary-foreground: #0A0A08;
+  --secondary: #1E1E1B;
+  --secondary-foreground: #F0F0EB;
+  --muted: #1E1E1B;
+  --muted-foreground: #999994;
+  --accent: #1E1E1B;
+  --accent-foreground: #F0F0EB;
+  --destructive: #C0392B;
+  --destructive-foreground: #F0F0EB;
+  --border: #2A2A27;
+  --input: #2A2A27;
+  --ring: #F0F0EB;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-instrument);
+  --font-serif: var(--font-playfair);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}

@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1100" viewBox="0 0 800 1100">
+  <defs>
+    <linearGradient id="veil-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4F3EE"/>
+      <stop offset="100%" stop-color="#ECEAE5"/>
+    </linearGradient>
+
+    <!-- Sheer fabric — very low opacity fills -->
+    <linearGradient id="panel-a" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#BEBCB6" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#AEACAA" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="panel-b" x1="70%" y1="0%" x2="30%" y2="100%">
+      <stop offset="0%" stop-color="#C8C6C0" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#B8B6B0" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="panel-c" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#D0CEC8" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#C0BEB8" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1100" fill="url(#veil-bg)"/>
+
+  <!-- ─── Suspension bar — thin black rod ─── -->
+  <rect x="180" y="118" width="440" height="4" fill="#1A1A18" rx="1"/>
+  <!-- Rod end caps -->
+  <rect x="176" y="114" width="8" height="12" fill="#141412" rx="1"/>
+  <rect x="616" y="114" width="8" height="12" fill="#141412" rx="1"/>
+
+  <!-- ─── Suspension hooks ─── -->
+  <path d="M 248,122 C 248,108 254,100 254,92 C 254,86 250,84 248,84" fill="none" stroke="#1A1A18" stroke-width="2"/>
+  <path d="M 360,122 C 360,106 366,98 366,90 C 366,84 362,82 360,82" fill="none" stroke="#1A1A18" stroke-width="2"/>
+  <path d="M 440,122 C 440,106 446,98 446,90 C 446,84 442,82 440,82" fill="none" stroke="#1A1A18" stroke-width="2"/>
+  <path d="M 552,122 C 552,108 558,100 558,92 C 558,86 554,84 552,84" fill="none" stroke="#1A1A18" stroke-width="2"/>
+
+  <!-- ═══════════════════════════════════════════
+       THE VEIL — three overlapping sheer panels
+       hanging from a rod, with subtle movement
+  ═══════════════════════════════════════════ -->
+
+  <!-- ─── PANEL A (leftmost, hangs straight) ─── -->
+  <path d="
+    M 200,122
+    C 202,300 196,500 200,700
+    C 203,840 200,940 198,1060
+    L 340,1060
+    C 342,940 345,840 348,700
+    C 352,500 346,300 348,122
+    Z
+  " fill="url(#panel-a)"/>
+  <!-- Panel A left edge — fine line -->
+  <path d="
+    M 200,122 C 202,300 196,500 200,700 C 203,840 200,940 198,1060
+  " fill="none" stroke="#B8B6B0" stroke-width="0.6" opacity="0.8"/>
+  <!-- Panel A right edge -->
+  <path d="
+    M 348,122 C 346,300 352,500 348,700 C 345,840 342,940 340,1060
+  " fill="none" stroke="#C0BEB8" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- ─── PANEL B (center, slight sway left) ─── -->
+  <path d="
+    M 310,122
+    C 306,280 298,460 295,660
+    C 293,800 296,920 292,1060
+    L 456,1060
+    C 460,920 462,800 464,660
+    C 466,460 460,280 456,122
+    Z
+  " fill="url(#panel-b)"/>
+  <!-- Panel B left edge -->
+  <path d="
+    M 310,122 C 306,280 298,460 295,660 C 293,800 296,920 292,1060
+  " fill="none" stroke="#BCBAB4" stroke-width="0.5" opacity="0.7"/>
+  <!-- Panel B right edge -->
+  <path d="
+    M 456,122 C 460,280 466,460 464,660 C 462,800 460,920 456,1060
+  " fill="none" stroke="#B4B2AC" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- ─── PANEL C (rightmost, slight sway right) ─── -->
+  <path d="
+    M 452,122
+    C 454,300 462,500 464,700
+    C 465,840 460,940 458,1060
+    L 600,1060
+    C 602,940 604,840 603,700
+    C 604,500 598,300 600,122
+    Z
+  " fill="url(#panel-a)"/>
+  <!-- Panel C left edge -->
+  <path d="
+    M 452,122 C 454,300 462,500 464,700 C 465,840 460,940 458,1060
+  " fill="none" stroke="#B8B6B0" stroke-width="0.5" opacity="0.7"/>
+  <!-- Panel C right edge -->
+  <path d="
+    M 600,122 C 598,300 604,500 603,700 C 603,840 602,940 600,1060
+  " fill="none" stroke="#C4C2BC" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- ─── Fine horizontal weave lines — all three panels ─── -->
+  <!-- These suggest the translucent fabric texture -->
+  <g stroke="#B0AEA8" stroke-width="0.3" opacity="0.5">
+    <line x1="198" y1="200" x2="602" y2="200"/>
+    <line x1="198" y1="260" x2="602" y2="260"/>
+    <line x1="198" y1="320" x2="602" y2="320"/>
+    <line x1="197" y1="380" x2="601" y2="380"/>
+    <line x1="196" y1="440" x2="601" y2="440"/>
+    <line x1="196" y1="500" x2="601" y2="500"/>
+    <line x1="196" y1="560" x2="601" y2="560"/>
+    <line x1="196" y1="620" x2="601" y2="620"/>
+    <line x1="196" y1="680" x2="601" y2="680"/>
+    <line x1="195" y1="740" x2="600" y2="740"/>
+    <line x1="195" y1="800" x2="600" y2="800"/>
+    <line x1="194" y1="860" x2="600" y2="860"/>
+    <line x1="194" y1="920" x2="599" y2="920"/>
+    <line x1="194" y1="980" x2="599" y2="980"/>
+    <line x1="193" y1="1040" x2="599" y2="1040"/>
+  </g>
+
+  <!-- ─── Hem — three panel hems, slightly uneven (cut on bias) ─── -->
+  <line x1="198" y1="1060" x2="340" y2="1060" stroke="#B4B2AC" stroke-width="0.8" opacity="0.7"/>
+  <line x1="292" y1="1060" x2="456" y2="1060" stroke="#B0AEA8" stroke-width="0.8" opacity="0.6"/>
+  <line x1="458" y1="1060" x2="600" y2="1060" stroke="#B8B6B0" stroke-width="0.8" opacity="0.7"/>
+
+  <!-- ─── Vertical warp threads — suggest weave ─── -->
+  <g stroke="#C0BEB6" stroke-width="0.25" opacity="0.35">
+    <line x1="230" y1="122" x2="225" y2="1060"/>
+    <line x1="270" y1="122" x2="268" y2="1060"/>
+    <line x1="310" y1="122" x2="305" y2="1060"/>
+    <line x1="350" y1="122" x2="348" y2="1060"/>
+    <line x1="390" y1="122" x2="390" y2="1060"/>
+    <line x1="430" y1="122" x2="432" y2="1060"/>
+    <line x1="470" y1="122" x2="472" y2="1060"/>
+    <line x1="510" y1="122" x2="513" y2="1060"/>
+    <line x1="550" y1="122" x2="554" y2="1060"/>
+    <line x1="580" y1="122" x2="585" y2="1060"/>
+  </g>
+
+  <!-- Corner registration marks -->
+  <rect x="40" y="40" width="28" height="1" fill="#C0BEB8" opacity="0.7"/>
+  <rect x="40" y="40" width="1" height="28" fill="#C0BEB8" opacity="0.7"/>
+  <rect x="732" y="40" width="28" height="1" fill="#C0BEB8" opacity="0.7"/>
+  <rect x="759" y="40" width="1" height="28" fill="#C0BEB8" opacity="0.7"/>
+  <rect x="40" y="1059" width="28" height="1" fill="#C0BEB8" opacity="0.7"/>
+  <rect x="40" y="1032" width="1" height="28" fill="#C0BEB8" opacity="0.7"/>
+  <rect x="732" y="1059" width="28" height="1" fill="#C0BEB8" opacity="0.7"/>
+  <rect x="759" y="1032" width="1" height="28" fill="#C0BEB8" opacity="0.7"/>
+</svg>

@@ -1,23 +1,24 @@
 import { ProductCard } from './product-card'
+import { pub } from '@/lib/utils'
 
 const products = [
   {
     id: 1,
     name: 'The Pillar',
     price: '$680',
-    image: '/images/pillar.svg',
+    image: pub('/images/pillar.svg'),
   },
   {
     id: 2,
     name: 'The Ark',
     price: '$920',
-    image: '/images/ark.svg',
+    image: pub('/images/ark.svg'),
   },
   {
     id: 3,
     name: 'The Veil',
     price: '$480',
-    image: '/images/veil.svg',
+    image: pub('/images/veil.svg'),
   },
 ]
 

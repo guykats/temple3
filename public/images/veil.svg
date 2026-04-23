@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1100" viewBox="0 0 800 1100">
+  <defs>
+    <linearGradient id="bg-veil" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2F2EC"/>
+      <stop offset="100%" stop-color="#E8E8E2"/>
+    </linearGradient>
+    <linearGradient id="fabric-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A18" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#1A1A18" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="fabric-2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A18" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#1A1A18" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1100" fill="url(#bg-veil)"/>
+
+  <!-- Hanging rod at top -->
+  <rect x="100" y="110" width="600" height="3" fill="#B8B8B2"/>
+  <circle cx="150" cy="111" r="5" fill="#A8A8A2" stroke="#989892" stroke-width="1"/>
+  <circle cx="300" cy="111" r="5" fill="#A8A8A2" stroke="#989892" stroke-width="1"/>
+  <circle cx="400" cy="111" r="5" fill="#A8A8A2" stroke="#989892" stroke-width="1"/>
+  <circle cx="500" cy="111" r="5" fill="#A8A8A2" stroke="#989892" stroke-width="1"/>
+  <circle cx="650" cy="111" r="5" fill="#A8A8A2" stroke="#989892" stroke-width="1"/>
+
+  <!-- Primary veil panel — flowing curves -->
+  <path d="M150,113 C160,300 140,500 155,700 C165,850 150,950 160,1050 L340,1050 C330,950 345,850 335,700 C350,500 330,300 340,113 Z"
+    fill="url(#fabric-1)" stroke="#C8C8C2" stroke-width="0.5"/>
+
+  <!-- Second veil panel, offset -->
+  <path d="M300,113 C315,300 295,520 310,720 C320,870 305,960 315,1050 L500,1050 C490,960 505,870 495,720 C510,520 490,300 505,113 Z"
+    fill="url(#fabric-2)" stroke="#CACACC" stroke-width="0.5"/>
+
+  <!-- Third veil panel -->
+  <path d="M460,113 C470,280 452,480 465,680 C475,840 460,940 470,1050 L655,1050 C645,940 660,840 648,680 C662,480 644,280 655,113 Z"
+    fill="url(#fabric-1)" stroke="#C4C4BE" stroke-width="0.5"/>
+
+  <!-- Fine horizontal weave lines across veil — suggest sheerness -->
+  <line x1="150" y1="200" x2="655" y2="200" stroke="#D0D0CA" stroke-width="0.3" opacity="0.6"/>
+  <line x1="150" y1="280" x2="655" y2="280" stroke="#D0D0CA" stroke-width="0.3" opacity="0.6"/>
+  <line x1="150" y1="360" x2="655" y2="360" stroke="#D0D0CA" stroke-width="0.3" opacity="0.6"/>
+  <line x1="150" y1="440" x2="655" y2="440" stroke="#D0D0CA" stroke-width="0.3" opacity="0.6"/>
+  <line x1="150" y1="520" x2="655" y2="520" stroke="#D0D0CA" stroke-width="0.3" opacity="0.6"/>
+  <line x1="150" y1="600" x2="655" y2="600" stroke="#D0D0CA" stroke-width="0.3" opacity="0.6"/>
+  <line x1="150" y1="680" x2="655" y2="680" stroke="#D0D0CA" stroke-width="0.3" opacity="0.6"/>
+  <line x1="150" y1="760" x2="655" y2="760" stroke="#D0D0CA" stroke-width="0.3" opacity="0.6"/>
+  <line x1="150" y1="840" x2="655" y2="840" stroke="#D0D0CA" stroke-width="0.3" opacity="0.6"/>
+  <line x1="150" y1="920" x2="655" y2="920" stroke="#D0D0CA" stroke-width="0.3" opacity="0.6"/>
+  <line x1="150" y1="1000" x2="655" y2="1000" stroke="#D0D0CA" stroke-width="0.3" opacity="0.6"/>
+
+  <!-- Hem -->
+  <line x1="155" y1="1050" x2="660" y2="1050" stroke="#B8B8B2" stroke-width="1" opacity="0.6"/>
+
+  <!-- Corner registration marks -->
+  <rect x="40" y="40" width="30" height="1" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="40" y="40" width="1" height="30" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="730" y="40" width="30" height="1" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="759" y="40" width="1" height="30" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="40" y="1059" width="30" height="1" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="40" y="1030" width="1" height="30" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="730" y="1059" width="30" height="1" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="759" y="1030" width="1" height="30" fill="#C0C0BA" opacity="0.8"/>
+</svg>

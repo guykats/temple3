@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1100" viewBox="0 0 800 1100">
+  <defs>
+    <linearGradient id="bg-pillar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEEEE8"/>
+      <stop offset="100%" stop-color="#E0E0DA"/>
+    </linearGradient>
+    <linearGradient id="pillar-body" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#181818"/>
+      <stop offset="30%" stop-color="#222220"/>
+      <stop offset="70%" stop-color="#1C1C1A"/>
+      <stop offset="100%" stop-color="#141412"/>
+    </linearGradient>
+    <linearGradient id="pillar-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A18" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#1A1A18" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#1A1A18" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1100" fill="url(#bg-pillar)"/>
+
+  <!-- Subtle grid texture -->
+  <line x1="0" y1="200" x2="800" y2="200" stroke="#D8D8D2" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#D8D8D2" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="600" x2="800" y2="600" stroke="#D8D8D2" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="800" x2="800" y2="800" stroke="#D8D8D2" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="1000" x2="800" y2="1000" stroke="#D8D8D2" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Capital / top of pillar -->
+  <rect x="270" y="100" width="260" height="16" fill="#1A1A18" rx="0"/>
+  <rect x="300" y="116" width="200" height="8" fill="#141412"/>
+
+  <!-- Pillar shaft -->
+  <rect x="330" y="124" width="140" height="820" fill="url(#pillar-fade)"/>
+
+  <!-- Fluting lines on pillar -->
+  <line x1="350" y1="124" x2="350" y2="944" stroke="#242422" stroke-width="0.5" opacity="0.6"/>
+  <line x1="370" y1="124" x2="370" y2="944" stroke="#242422" stroke-width="0.5" opacity="0.6"/>
+  <line x1="390" y1="124" x2="390" y2="944" stroke="#282826" stroke-width="0.5" opacity="0.4"/>
+  <line x1="410" y1="124" x2="410" y2="944" stroke="#282826" stroke-width="0.5" opacity="0.4"/>
+  <line x1="430" y1="124" x2="430" y2="944" stroke="#242422" stroke-width="0.5" opacity="0.6"/>
+  <line x1="450" y1="124" x2="450" y2="944" stroke="#242422" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- Base -->
+  <rect x="300" y="944" width="200" height="10" fill="#141412"/>
+  <rect x="270" y="954" width="260" height="18" fill="#1A1A18"/>
+
+  <!-- Shadow / ground -->
+  <ellipse cx="400" cy="990" rx="130" ry="10" fill="#C8C8C2" opacity="0.4"/>
+
+  <!-- Corner registration marks -->
+  <rect x="40" y="40" width="30" height="1" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="40" y="40" width="1" height="30" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="730" y="40" width="30" height="1" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="759" y="40" width="1" height="30" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="40" y="1059" width="30" height="1" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="40" y="1030" width="1" height="30" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="730" y="1059" width="30" height="1" fill="#C0C0BA" opacity="0.8"/>
+  <rect x="759" y="1030" width="1" height="30" fill="#C0C0BA" opacity="0.8"/>
+</svg>

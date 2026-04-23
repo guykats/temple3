@@ -38,7 +38,7 @@ export function HeroSection() {
         {/* Right: Hero Image */}
         <div className="relative h-[60vh] lg:h-screen order-1 lg:order-2">
           <Image
-            src="/images/hero.svg"
+            src="/images/hero.jpg"
             alt="The threshold — architectural gateway from THE STRUCTURE OF MEMORY"
             fill
             className="object-cover object-center"

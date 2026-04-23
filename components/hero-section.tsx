@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowDown } from 'lucide-react'
-import { pub } from '@/lib/utils'
 
 export function HeroSection() {
   return (
@@ -39,7 +38,7 @@ export function HeroSection() {
         {/* Right: Hero Image */}
         <div className="relative h-[60vh] lg:h-screen order-1 lg:order-2">
           <Image
-            src={pub('/images/hero.jpg')}
+            src="https://guykats.com/t3/hero.jpg"
             alt="The threshold — architectural gateway from THE STRUCTURE OF MEMORY"
             fill
             className="object-cover object-center"

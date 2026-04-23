@@ -1,16 +1,14 @@
-import { Nav } from '@/components/nav'
-import { Hero } from '@/components/hero'
-import { ProductsGrid } from '@/components/products-grid'
-import { Manifesto } from '@/components/manifesto'
+import { Navigation } from '@/components/navigation'
+import { HeroSection } from '@/components/hero-section'
+import { ProductGrid } from '@/components/product-grid'
 import { Footer } from '@/components/footer'
 
 export default function Home() {
   return (
-    <main>
-      <Nav />
-      <Hero />
-      <ProductsGrid />
-      <Manifesto />
+    <main className="min-h-screen bg-background">
+      <Navigation />
+      <HeroSection />
+      <ProductGrid />
       <Footer />
     </main>
   )

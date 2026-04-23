@@ -1,57 +1,68 @@
+'use client'
+
 import Image from 'next/image'
-import Link from 'next/link'
-import type { Product } from '@/lib/products'
+import { useState } from 'react'
 
 interface ProductCardProps {
-  product: Product
+  name: string
+  price: string
+  image: string
+  hoverImage?: string
 }
 
-export function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({ name, price, image, hoverImage }: ProductCardProps) {
+  const [isHovered, setIsHovered] = useState(false)
+
   return (
-    <article className="group">
-      {/* Image */}
-      <div className="relative aspect-[3/4] bg-secondary overflow-hidden mb-6">
-        {product.image ? (
+    <article
+      className="group cursor-pointer"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Image Container */}
+      <div className="relative aspect-[3/4] bg-secondary overflow-hidden">
+        <Image
+          src={image}
+          alt={name}
+          fill
+          className={`object-cover object-center transition-all duration-700 ease-out ${
+            isHovered && hoverImage ? 'opacity-0' : 'opacity-100'
+          }`}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+        />
+        {hoverImage && (
           <Image
-            src={product.image}
-            alt={product.name}
+            src={hoverImage}
+            alt={`${name} — alternate view`}
             fill
-            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            className={`object-cover object-center transition-all duration-700 ease-out ${
+              isHovered ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
+            }`}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
           />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-serif text-[10px] tracking-[0.4em] text-muted-foreground uppercase">
-              {product.name}
-            </span>
-          </div>
         )}
+
+        {/* Quick view overlay */}
+        <div
+          className={`absolute inset-0 flex items-end justify-center pb-6 transition-opacity duration-300 ${
+            isHovered ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <span className="text-[10px] tracking-[0.3em] uppercase text-foreground bg-background/90 px-4 py-2">
+            View
+          </span>
+        </div>
       </div>
 
-      {/* Info */}
-      <div className="flex items-start justify-between mb-2">
-        <div>
-          <h3 className="font-serif text-lg tracking-[0.08em] text-foreground">
-            {product.name}
-          </h3>
-          <p className="font-sans text-[10px] tracking-[0.25em] uppercase text-muted-foreground mt-1">
-            {product.subtitle}
-          </p>
-        </div>
-        <span className="font-sans text-sm text-foreground pt-0.5">
-          {product.price}
+      {/* Product Info */}
+      <div className="mt-4 flex justify-between items-start">
+        <h3 className="text-xs tracking-[0.2em] uppercase text-foreground font-sans font-medium">
+          {name}
+        </h3>
+        <span className="text-xs text-foreground/60 font-sans tracking-wider">
+          {price}
         </span>
       </div>
-
-      <p className="font-sans text-xs text-muted-foreground leading-relaxed mb-5 max-w-[26ch]">
-        {product.description}
-      </p>
-
-      <Link
-        href={`/collection/${product.slug}`}
-        className="font-sans text-[10px] tracking-[0.3em] uppercase border-b border-foreground pb-0.5 hover:opacity-40 transition-opacity"
-      >
-        Acquire
-      </Link>
     </article>
   )
 }

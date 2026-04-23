@@ -17,9 +17,10 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'THE STRUCTURE OF MEMORY',
+  title: 'THE STRUCTURE OF MEMORY | Premium Fashion',
   description:
-    'A deliberate collection. Drawn from the architecture of something older. Worn by those who remember without being told.',
+    'A premium fashion label exploring the architecture of form and memory through minimal, timeless designs.',
+  generator: 'v0.app',
   icons: {
     icon: [
       { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },

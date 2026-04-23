@@ -1,47 +1,92 @@
 import Link from 'next/link'
-
-const FOOTER_LINKS = [
-  { label: 'Collection', href: '/collection' },
-  { label: 'Manifesto', href: '/manifesto' },
-  { label: 'Atelier', href: '/atelier' },
-  { label: 'Contact', href: '/contact' },
-]
+import { Instagram, ArrowUpRight } from 'lucide-react'
 
 export function Footer() {
-  const year = new Date().getFullYear()
-
   return (
-    <footer className="px-8 py-16 border-t border-border">
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-        <div>
-          <p className="font-serif text-xs tracking-[0.3em] uppercase text-foreground mb-1">
-            The Structure of Memory
-          </p>
-          <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
-            Studio — Jerusalem · Paris · New York
+    <footer id="contact" className="px-6 md:px-12 lg:px-20 py-16 md:py-24 border-t border-border">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
+        {/* Brand */}
+        <div className="lg:col-span-2">
+          <Link
+            href="/"
+            className="text-xs tracking-[0.3em] uppercase text-foreground"
+          >
+            Structure
+          </Link>
+          <p className="mt-6 text-sm text-foreground/50 max-w-xs leading-relaxed tracking-wide font-sans">
+            What is sacred is also structural. Every seam is a decision made
+            once and never reconsidered.
           </p>
         </div>
 
-        <nav className="flex flex-col md:flex-row gap-4 md:gap-8">
-          {FOOTER_LINKS.map(({ label, href }) => (
-            <Link
-              key={label}
-              href={href}
-              className="font-sans text-[10px] tracking-[0.25em] uppercase text-muted-foreground hover:text-foreground transition-colors"
+        {/* Navigate */}
+        <div>
+          <span className="text-[10px] tracking-[0.3em] uppercase text-foreground/40 block mb-6">
+            Navigate
+          </span>
+          <div className="flex flex-col gap-4">
+            {[
+              { label: 'Collection', href: '#collection' },
+              { label: 'About', href: '#about' },
+              { label: 'Shipping', href: '#' },
+              { label: 'Returns', href: '#' },
+            ].map(({ label, href }) => (
+              <Link
+                key={label}
+                href={href}
+                className="text-sm text-foreground/70 hover:text-foreground transition-colors font-sans tracking-wide"
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Connect */}
+        <div id="about">
+          <span className="text-[10px] tracking-[0.3em] uppercase text-foreground/40 block mb-6">
+            Connect
+          </span>
+          <div className="flex flex-col gap-4">
+            <a
+              href="mailto:studio@thestructureofmemory.com"
+              className="text-sm text-foreground/70 hover:text-foreground transition-colors font-sans tracking-wide"
             >
-              {label}
-            </Link>
-          ))}
-        </nav>
+              studio@thestructureofmemory.com
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-foreground/70 hover:text-foreground transition-colors font-sans tracking-wide"
+            >
+              <Instagram size={14} />
+              Instagram
+              <ArrowUpRight size={10} />
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div className="mt-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-        <p className="font-sans text-[10px] tracking-[0.1em] text-muted-foreground">
-          © {year} The Structure of Memory. All rights reserved.
-        </p>
-        <p className="font-sans text-[10px] tracking-[0.1em] text-muted-foreground">
-          studio@thestructureofmemory.com
-        </p>
+      {/* Bottom bar */}
+      <div className="mt-16 md:mt-24 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <span className="text-[10px] tracking-[0.15em] text-foreground/30">
+          © {new Date().getFullYear()} THE STRUCTURE OF MEMORY. All rights reserved.
+        </span>
+        <div className="flex gap-6">
+          <Link
+            href="#"
+            className="text-[10px] tracking-[0.15em] text-foreground/30 hover:text-foreground/60 transition-colors"
+          >
+            Privacy
+          </Link>
+          <Link
+            href="#"
+            className="text-[10px] tracking-[0.15em] text-foreground/30 hover:text-foreground/60 transition-colors"
+          >
+            Terms
+          </Link>
+        </div>
       </div>
     </footer>
   )
